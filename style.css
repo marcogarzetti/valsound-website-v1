@@ -1,0 +1,200 @@
+/* ---------- RESET ---------- */
+:root {
+    --bg-dark: #2b2b2b;      /* blu notte quasi nero */
+  --bg-light: #f8fafc;    /* grigio chiarissimo */
+  --text-main: #1f2933;   /* testo principale */
+  --text-muted: #64748b;  /* testo secondario */
+  --accent: #3b82f6;      /* blu tecnico */
+  --valsound-yellow: #f6bf29;
+  --valsound-red: #bd0926;
+  --border-soft: #e2e8f0;
+    --bg-section: #0f172a;   /* blu notte */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+      background-color: var(--bg-section);
+  color: var(--text-main);
+}
+
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+      background: var(--bg-dark);
+  color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin-left: auto;
+}
+
+/* ---------- HERO IMAGE ---------- */
+.hero {
+    height: 92vh;
+    /* adjust: 60–80vh works well */
+    min-height: 400px;
+    width: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)),
+        url("img/header.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+
+/* ---------- MAIN ---------- */
+main {
+    padding: 40px;
+    
+}
+
+.highlight {
+  border: 1px solid #ccc;      /* bordo sottile grigio */
+  padding: 20px;               /* spazio interno */
+  margin: 20px 0;              /* spazio tra le sezioni */
+  border-radius: 8px;          /* angoli arrotondati */
+  display: flex;               /* immagine + testo affiancati */
+  gap: 20px;
+    align-items: center;      /* 🔹 centra verticalmente */
+  position: relative;
+
+  background: white;
+  border: 1px solid var(--border-soft);
+  border-left: 4px solid var(--accent); /* dettaglio tech */
+  border-radius: 8px;
+}
+
+.highlight-first {
+  border-left-color: var(--valsound-yellow);
+}
+
+
+.highlight:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.highlight-text {
+    flex: 1;
+}
+
+.highlight-text h2 {
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.highlight-text p {
+    color: #555;
+}
+
+.highlight-image {
+    flex: 1;
+    max-width: 250px;
+}
+
+.services-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.services-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.services-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00bcd4;   /* colore accent (tech) */
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* ---------- CONTACTS ---------- */
+.highlight-contact {
+    background: #f1f5f9;
+  border-left-color: var(--valsound-red);
+}
+
+.contact-email {
+  font-weight: 600;          /* grassetto elegante */
+  color: var(--accent);      /* colore tecnico coerente */
+  text-decoration: none;
+}
+
+.contact-email:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .highlight {
+        flex-direction: column;
+    }
+
+    .highlight:nth-child(even) {
+        flex-direction: column;
+    }
+}
