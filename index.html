@@ -5,58 +5,100 @@
   <meta charset="UTF-8">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
-  <title>Valsound - Professional audio</title>
+  <title>Valsound • Professional audio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Google Font -->
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <img src="logo.png" alt="Valsound Logo">
-  <!-- <h1>Professional audio</h1> -->
-</header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <a href="index.html">
+      <img src="logo.png" alt="Valsound Logo">
+    </a>
 
-<!-- HERO IMAGE -->
-<section class="hero">
-  <div class="hero-content">
-    <h1>Soluzioni audio professionali</h1>
-    <p>Progettazione • Installazione • Service • System Integration</p>
-  </div>
-</section>
+
+    <!-- LANGUAGE SELECTOR -->
+    <nav class="language-switcher">
+      <button data-lang-btn="it" onclick="setLanguage('it')">IT</button>
+      <button data-lang-btn="en" onclick="setLanguage('en')">EN</button>
+    </nav>
+  </header>
+
+
+  <!-- HERO IMAGE -->
+  <section class="hero">
+    <div class="hero-content" data-lang="it">
+      <h1>Pro audio solutions</h1>
+      <p>Progettazione • Installazione • Service • System Integration</p>
+    </div>
+
+    <div class="hero-content" data-lang="en" style="display:none;">
+      <h1>Pro audio solutions</h1>
+      <p>Design • Install • Rental • System Integration</p>
+    </div>
+  </section>
 
 
   <!-- MAIN CONTENT -->
   <main>
 
+    <!-- WHAT WE DO -->
     <section class="highlight highlight-first">
-      <div class="highlight-text">
+      <div class="highlight-text" data-lang="it">
         <h2>Cosa facciamo</h2>
         <p>
-          Dal 2012 Valsound si occupa in Provincia di Sondrio di progettazione, consulenza, noleggio e assistenza tecnica per sistemi audio professionali, sia dedicati all'installazione fissa in luoghi di intrattenimento e spettacolo che per eventi.
+          Dal 2012 Valsound si occupa in Provincia di Sondrio di progettazione, consulenza, noleggio e assistenza
+          tecnica per sistemi audio professionali, sia dedicati all'installazione fissa in luoghi di intrattenimento e
+          spettacolo che per eventi.
+        </p>
+      </div>
+
+      <div class="highlight-text" data-lang="en" style="display:none;">
+        <h2>What we do</h2>
+        <p>
+          Since 2012 Valsound provides professional audio design and systems.
         </p>
       </div>
     </section>
 
+    <!-- INSTALL -->
     <section class="highlight">
       <div class="highlight-image">
         <img src="img/design.png" alt="Highlight 2">
       </div>
-      <div class="highlight-text">
+      <div class="highlight-text" data-lang="it">
         <h2>Sistemi fissi da installazione</h2>
         <ul class="services-list">
           <li>Analisi dei requisiti e studio preliminare delle caratteristiche acustiche dei luoghi.</li>
-
           <li>Scelta con il cliente del migliore sistema di diffusione sonora in relazione alle necessità, alle
             caratteristiche acustiche e al budget.</li>
           <li>Uso di software di predizione acustica per il corretto posizionamento dei diffusori e la simulazione dei
             risultati ottenibili in termini di quantità e distribuzione uniforme della pressione sonora sulle
-            aree di ascolto, anche in coordinamento a trattamenti acustici di fonoassorbimento per evitare riflessioni e riverberi.</li>
+            aree di ascolto, anche in coordinamento a trattamenti acustici di fonoassorbimento per evitare riflessioni e
+            riverberi.</li>
+          <li>Scelta e programmazione di processori DSP per la gestione centralizzata dell'intero sistema da touchscreen
+            dedicato o app mobile, la gestione dei segnali, equalizzazione e ottimizzazione del sistema. Gestione
+            multizona e multiroom.</li>
+          <li>Configurazione di limitatori SPL per il rispetto dei limiti in termini di dB all'interno e all'esterno
+            degli spazi. </li>
+        </ul>
+      </div>
+
+      <div class="highlight-text" data-lang="en" style="display:none;">
+        <h2>Installed sound systems</h2>
+        <ul class="services-list">
+          <li>Analisi dei requisiti e studio preliminare delle caratteristiche acustiche dei luoghi.</li>
+          <li>Scelta con il cliente del migliore sistema di diffusione sonora in relazione alle necessità, alle
+            caratteristiche acustiche e al budget.</li>
+          <li>Uso di software di predizione acustica per il corretto posizionamento dei diffusori e la simulazione dei
+            risultati ottenibili in termini di quantità e distribuzione uniforme della pressione sonora sulle
+            aree di ascolto, anche in coordinamento a trattamenti acustici di fonoassorbimento per evitare riflessioni e
+            riverberi.</li>
           <li>Scelta e programmazione di processori DSP per la gestione centralizzata dell'intero sistema da touchscreen
             dedicato o app mobile, la gestione dei segnali, equalizzazione e ottimizzazione del sistema. Gestione
             multizona e multiroom.</li>
@@ -66,11 +108,12 @@
       </div>
     </section>
 
-        <section class="highlight">
+    <!-- CONTROL -->
+    <section class="highlight">
       <div class="highlight-image">
         <img src="img/network.png" alt="Highlight 2">
       </div>
-      <div class="highlight-text">
+      <div class="highlight-text" data-lang="it">
         <h2>Programmazione domotica e integrazione audio video</h2>
         <ul class="services-list">
           <li>Programmazione sistemi di controllo domotico</li>
@@ -78,20 +121,45 @@
           <li>Integrazione di sistemi di illuminazione, proiezione e di distribuzione video</li>
           <li>Progettazione e configurazione reti TCP/IP per il trasporto e la distribuzione dei segnali audio in
             infrastrutture complesse. Audio/video over IP.</li>
-                      <li>Controllo domotico di DSP audio, matrici video, sistemi di controllo luci</li>
+          <li>Controllo domotico di DSP audio, matrici video, sistemi di controllo luci</li>
+        </ul>
+      </div>
 
-
+      <div class="highlight-text" data-lang="en" style="display:none;">
+        <h2>Programmazione domotica e integrazione audio video</h2>
+        <ul class="services-list">
+          <li>Programmazione sistemi di controllo domotico</li>
+          <li>Realizzazione di soluzioni software customizzate</li>
+          <li>Integrazione di sistemi di illuminazione, proiezione e di distribuzione video</li>
+          <li>Progettazione e configurazione reti TCP/IP per il trasporto e la distribuzione dei segnali audio in
+            infrastrutture complesse. Audio/video over IP.</li>
+          <li>Controllo domotico di DSP audio, matrici video, sistemi di controllo luci</li>
         </ul>
       </div>
     </section>
 
+    <!-- LIVE -->
     <section class="highlight">
       <div class="highlight-image">
         <img src="img/array.jpg" alt="Highlight 3">
       </div>
-      <div class="highlight-text">
-        <h2>Sistemi per eventi live</h2>
-<ul class="services-list">
+      <div class="highlight-text" data-lang="it">
+        <h2>Pro sound & light per eventi • Service</h2>
+        <ul class="services-list">
+          <li>Noleggio con operatore e assistenza di impianti audio / luci per eventi</li>
+          <li>Configurazioni e sistemi adattabili a diversi tipi di situazioni</li>
+          <li>Impianti audio line array e point source</li>
+          <li>Mixer digitali con trasporto segnali su ethernet</li>
+          <li>Microfoni, radiomicrofoni, sistemi di monitoraggio</li>
+          <li>Fari motorizzati led wash/beam</li>
+          <li>Regia e programmazione luci</li>
+          <li>Assistenza tecnica qualificata</li>
+        </ul>
+      </div>
+
+      <div class="highlight-text" data-lang="en" style="display:none;">
+        <h2>Pro sound & light per eventi • Service</h2>
+        <ul class="services-list">
           <li>Noleggio con operatore e assistenza di impianti audio / luci per eventi</li>
           <li>Configurazioni e sistemi adattabili a diversi tipi di situazioni</li>
           <li>Impianti audio line array e point source</li>
@@ -104,14 +172,23 @@
       </div>
     </section>
 
+    <!-- CONTACTS -->
     <section class="highlight highlight-contact">
-      <div class="highlight-text">
+      <div class="highlight-text" data-lang="it">
         <h2>Contatti</h2>
         <p>Valsound di Garzetti Marco · P. IVA: 00950450148 · REA: SO - 71635 </p><br>
-<p>Per entrare in contatto e chiederci informazioni, invia una mail a
-<a href="mailto:info@valsound.it" class="contact-email">info@valsound.it</a><br>
-Ti risponderemo il prima possibile!
+        <p>Per entrare in contatto e chiederci informazioni, invia una mail a
+          <a href="mailto:info@valsound.it" class="contact-email">info@valsound.it</a><br>
+          Ti risponderemo il prima possibile!
+        </p>
+      </div>
 
+      <div class="highlight-text" data-lang="en" style="display:none;">
+        <h2>Contatti</h2>
+        <p>Valsound di Garzetti Marco · P. IVA: 00950450148 · REA: SO - 71635 </p><br>
+        <p>Per entrare in contatto e chiederci informazioni, invia una mail a
+          <a href="mailto:info@valsound.it" class="contact-email">info@valsound.it</a><br>
+          Ti risponderemo il prima possibile!
         </p>
       </div>
     </section>
@@ -120,8 +197,46 @@ Ti risponderemo il prima possibile!
 
   <!-- FOOTER -->
   <footer>
-    © 2025 Tutti i diritti riservati · Realizzato da Valsound
+    <div data-lang="it">
+      © 2025 Tutti i diritti riservati · Realizzato da Valsound ·
+      <a href="privacy.html" target="_blank">Privacy Policy</a>
+    </div>
+
+    <div data-lang="en" style="display:none;">
+      © 2025 All rights reserved · Created by Valsound ·
+      <a href="privacy.html" target="_blank">Privacy Policy</a>
+    </div>
   </footer>
+
+  <script>
+    //set language function
+    function setLanguage(lang) {
+
+      //take all the html elements with the data-lang attribute
+      document.querySelectorAll('[data-lang]')
+        //for each element, set the display attribute to '' if the value of the attribute data-lang is = to lang, otherwise set the display attribute to 'none'
+        .forEach(el => {
+          el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+        });
+
+      //button feedback
+      document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+        btn.classList.toggle(
+          'active',
+          btn.getAttribute('data-lang-btn') === lang
+        );
+      });
+
+      //save the choosen language to the browser memory
+      localStorage.setItem('language', lang);
+    }
+
+    //load saved language
+    const savedLang = localStorage.getItem('language');
+    if (savedLang) {
+      setLanguage(savedLang);
+    }
+  </script>
 
 </body>
 
