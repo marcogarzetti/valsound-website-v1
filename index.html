@@ -52,7 +52,8 @@
         <h2>Cosa facciamo</h2>
         <p>
           Dal 2012 Valsound si occupa in Provincia di Sondrio di progettazione, consulenza, noleggio e assistenza
-          tecnica relativa a sistemi audio professionali, sia destinati all'installazione fissa in luoghi di intrattenimento e
+          tecnica relativa a sistemi audio professionali, sia destinati all'installazione fissa in luoghi di
+          intrattenimento e
           spettacolo che per eventi.
         </p>
       </div>
@@ -208,11 +209,14 @@
   </footer>
 
   <script>
+
+    //set visibility to elements with data-lang = the selected language
     function setLanguage(lang) {
       document.querySelectorAll('[data-lang]').forEach(el => {
         el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
       });
 
+      //set button feedback
       document.querySelectorAll('[data-lang-btn]').forEach(btn => {
         btn.classList.toggle(
           'active',
@@ -220,13 +224,29 @@
         );
       });
 
+      //set the browser variable with the selected language
       localStorage.setItem('language', lang);
     }
 
+
+    // --- INIT LANGUAGE --- 
+    //retrieve the selected language from the browser variable. If variable not available, use browser language
     const savedLang = localStorage.getItem('language');
+
+    let initialLang;
+
     if (savedLang) {
-      setLanguage(savedLang);
+      initialLang = savedLang;
+    } else {
+      const browserLang = navigator.language || navigator.userLanguage;
+      initialLang = browserLang.startsWith('it') ? 'it' : 'en';
     }
+
+    //debug browser language
+    //const browserLang = navigator.language || navigator.userLanguage;
+    //console.log('Browser language:', browserLang);
+
+    setLanguage(initialLang);
   </script>
 
 </body>
